@@ -28,3 +28,6 @@ hosting.*.cache
 
 # Yarn
 yarn.lock
+
+# env
+.env
