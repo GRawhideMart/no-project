@@ -3,7 +3,11 @@ export default {
   mode: "jit",
   content: ["./src/**/*.{html,ts,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        "landing-page": "url('/images/landingpage.png')",
+      },
+    },
   },
   plugins: [],
 };
