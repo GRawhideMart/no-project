@@ -8,7 +8,7 @@ function App() {
       <Header />
       <main>
         <section className="landing-page overflow-hidden">
-          <div className="relative bg-landing-page bg-cover bg-center h-screen w-screen">
+          <div className="relative bg-landing-page bg-scroll bg-cover bg-center h-screen w-screen">
             <div className="absolute inset-0 bg-gradient-to-t from-black to-amber-500 opacity-35"></div>
             <div className="flex flex-col justify-center items-center h-full w-full">
               <img
