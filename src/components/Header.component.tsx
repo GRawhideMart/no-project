@@ -13,9 +13,9 @@ const Header = () => {
     <header className="flex justify-center items-center sticky top-0 w-full h-16 bg-emerald-800 z-10 p-4">
       <nav className="font-serif">
         <HeaderLink to="/">Home</HeaderLink>
-        <HeaderLink to="/about">About</HeaderLink>
-        <HeaderLink to="/services">Services</HeaderLink>
-        <HeaderLink to="/contact">Contact</HeaderLink>
+        <HeaderLink to="/about">Chi siamo</HeaderLink>
+        <HeaderLink to="/contact">Contattaci</HeaderLink>
+        <HeaderLink to="/news">Ultime notizie</HeaderLink>
       </nav>
     </header>
   );
