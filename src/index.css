@@ -3,14 +3,19 @@
 @tailwind utilities;
 
 body {
-  @apply bg-green-700 h-screen overflow-y-scroll;
+  @apply bg-green-700 h-screen overflow-x-hidden;
+  scroll-snap-type: y mandatory;
+}
+
+main {
+  @apply h-screen overflow-y-scroll -mt-16;
   scroll-snap-type: y mandatory;
 }
 
 section {
-  @apply snap-start h-full relative;
+  @apply snap-start min-h-screen relative;
 }
 
 .landing-page {
-  @apply min-h-full;
+  @apply min-h-screen;
 }

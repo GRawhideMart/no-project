@@ -1,12 +1,15 @@
 // import landingPage from "./assets/images/landingpage.png";
 import Header from "./components/Header.component";
+import { useScrollSnap } from "./hooks/useScrollSnap";
 import logo from "/images/logo.png";
 
 function App() {
+  const mainRef = useScrollSnap();
+
   return (
     <>
       <Header />
-      <main>
+      <main ref={mainRef}>
         <section className="landing-page overflow-hidden">
           <div className="relative bg-landing-page bg-scroll bg-cover bg-center h-screen w-screen">
             <div className="absolute inset-0 bg-gradient-to-t from-black to-amber-500 opacity-35"></div>
