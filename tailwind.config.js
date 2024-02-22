@@ -6,6 +6,7 @@ export default {
     extend: {
       backgroundImage: {
         "landing-page": "url('/images/landingpage.png')",
+        watermark: "url('/images/bg.png')",
       },
     },
   },

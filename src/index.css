@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  @apply bg-green-700 h-screen overflow-x-hidden;
+  @apply text-green-900 h-screen overflow-x-hidden;
   scroll-snap-type: y mandatory;
 }
 
@@ -17,5 +17,9 @@ section {
 }
 
 .landing-page {
+  @apply min-h-screen;
+}
+
+.about-us {
   @apply min-h-screen;
 }
