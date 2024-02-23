@@ -3,8 +3,10 @@ import SEO from "./components/SEO.component";
 import { LazyTextAnimation } from "./components/LazyTextGenerateEffect.component";
 import { useScrollSnap } from "./hooks/useScrollSnap";
 import logo from "/images/logo.png";
-import personSmiling from "/images/person_smiling.png";
+import personSmiling from "./assets/person_smiling.png";
 import { cn } from "./utils/cn";
+import LandingPageImage from "./assets/landingpage.png";
+import backgroundImage from "./assets/bg.png";
 
 function App() {
   const mainRef = useScrollSnap();
@@ -20,15 +22,25 @@ function App() {
             type="website"
             name="Martena Gnalogia & Postura"
           />
-          <div className="relative bg-landing-page bg-scroll bg-cover bg-center h-screen w-screen">
-            <div className="absolute inset-0 bg-gradient-to-t from-black to-amber-500 opacity-35"></div>
-            <div className="flex flex-col justify-center items-center h-full w-full">
+          <div className="relative h-screen w-screen">
+            <div className="amber-overlay"></div>
+            <img
+              src={LandingPageImage}
+              alt="Background Landing Page"
+              className="absolute inset-0 w-full h-full background-image object-cover object-center"
+            />
+            <div className="relative flex flex-col justify-center items-center h-full w-full z-10">
               <img
                 src={logo}
                 alt="Martena Gnalogia & Postura"
-                className="w-1/2 md:w-1/3 lg:w-1/4"
+                className="logo-image"
               />
-              <h1 className="hidden">MARTENA GNATOLOGIA & POSTURA</h1>
+              <div className="hidden m-5">
+                <h1 className="inline-block font-serif text-2xl text-transparent bg-clip-text text-center uppercase font-extrabold drop-shadow-lg p-16 bg-gradient-to-t from-green-900 via-emerald-500 to-amber-400">
+                  Specialisti in gnatologia e posturologia dal 1993. Allevia il
+                  dolore ATM e migliora la postura a Carmiano. Contattaci oggi!
+                </h1>
+              </div>
             </div>
           </div>
         </section>
@@ -40,23 +52,27 @@ function App() {
             type="article"
             name="Martena Gnalogia & Postura"
           />
-          <div className="bg-watermark bg-scroll bg-transparent bg-center h-screen w-screen p-16 -z-10">
-            <div className="absolute inset-0 bg-gradient-to-t from-white to-emerald-500 opacity-95 p-16">
-              <div className="grid grid-cols-1 md:grid-cols-2 h-screen md:pb-52">
-                <h2 className="pt-16 text-3xl uppercase font-bold md:px-16 col-span-1 md:col-span-2">
-                  Permettici di presentarci
-                </h2>
-                <div className="md:px-16 col-span-1 md:col-span-2 md:flex md:items-center">
-                  <LazyTextAnimation
-                    className={cn("text-green-800 mt-4 text-xl md:w-2/3")}
-                    words="Dal 1993 colleghiamo i tuoi disagi temporo-mandibolari all'impostazione della tua bocca. Dire che siamo solo dentisti è come dire che Leonardo era solo un pittore!"
-                  />
-                  <img
-                    src={personSmiling}
-                    alt="A person smiling"
-                    className="w-fit md:w-1/3 mt-4 rounded-full border-green-800 border-4 z-10"
-                  />
-                </div>
+          <div className="relative h-screen w-screen p-16">
+            <div className="green-overlay"></div>
+            <img
+              src={backgroundImage}
+              alt="Background texture"
+              className="absolute inset-0 w-full h-full background-image object-contain object-center"
+            />
+            <div className="grid grid-cols-1 md:grid-cols-2 h-screen md:pb-52">
+              <h2 className="pt-16 text-3xl uppercase font-bold md:px-16 col-span-1 md:col-span-2 z-10">
+                Permettici di presentarci
+              </h2>
+              <div className="md:px-16 col-span-1 md:col-span-2 md:flex md:items-center z-10">
+                <LazyTextAnimation
+                  className={cn("text-green-800 mt-4 text-xl md:w-2/3 z-10")}
+                  words="Dal 1993 colleghiamo i tuoi disagi temporo-mandibolari all'impostazione della tua bocca. Dire che siamo solo dentisti è come dire che Leonardo era solo un pittore!"
+                />
+                <img
+                  src={personSmiling}
+                  alt="A person smiling"
+                  className="w-fit md:w-1/3 mt-4 rounded-full border-green-800 border-4 z-10"
+                />
               </div>
             </div>
           </div>
