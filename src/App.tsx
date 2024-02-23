@@ -7,6 +7,7 @@ import personSmiling from "./assets/person_smiling.png";
 import { cn } from "./utils/cn";
 import LandingPageImage from "./assets/landingpage.png";
 import backgroundImage from "./assets/bg.png";
+import aboutImage from "./assets/about.png";
 
 function App() {
   const mainRef = useScrollSnap();
@@ -53,7 +54,7 @@ function App() {
           </div>
         </section>
 
-        <section className="about-us overflow-hidden">
+        <section className="hero-section overflow-hidden">
           <SEO
             title="Martena Gnalogia & Postura: Chi Siamo | Carmiano, Lecce"
             description="Gnatologi e posturologi esperti a Carmiano dal 1993. Vieni a scoprire come possiamo aiutarti a migliorare la tua postura e alleviare i disturbi ATM."
@@ -81,6 +82,44 @@ function App() {
                   alt="A person smiling"
                   className="w-fit md:w-1/3 mt-4 rounded-full border-green-800 border-4 z-10"
                 />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="about overflow-hidden">
+          <SEO
+            title="Martena Gnalogia & Postura: Servizi | Carmiano, Lecce"
+            description="Specialisti in gnatologia e posturologia a Carmiano. Scopri i nostri servizi per alleviare il dolore ATM e migliorare la tua postura."
+            type="article"
+            name="Martena Gnalogia & Postura"
+          />
+          <div className="relative h-screen w-screen p-16">
+            <div className="green-overlay"></div>
+            <img
+              src={backgroundImage}
+              alt="Background texture"
+              className="absolute inset-0 w-full h-full background-image object-contain object-center"
+            />
+            <div className="grid grid-cols-1 md:grid-cols-2 h-screen md:pb-52">
+              <h2 className="pt-16 text-3xl uppercase font-bold md:px-16 col-span-1 md:col-span-2 z-10">
+                I nostri dottori curano il tuo benessere a 360°
+              </h2>
+              <div className="md:px-16 col-span-1 md:col-span-2 md:flex md:items-center z-10">
+                <img
+                  src={aboutImage}
+                  alt="A person smiling"
+                  className="w-48 h-48 md:w-96 md:h-96 mt-4 object-cover rounded-full border-green-800 border-4 z-10"
+                />
+                <h2 className="text-green-800 mt-4 text-xl md:w-2/3 z-10 md:px-16">
+                  <LazyTextAnimation
+                    words="Forniamo cure ortodontiche,
+gnatologiche, posturologiche e
+podologiche. Igiene, ortodonzia,
+gnatologia, podologia, qualsiasi -ologia
+che tu voglia la puoi trovare da noi!"
+                  />
+                </h2>
               </div>
             </div>
           </div>
