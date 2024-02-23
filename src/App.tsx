@@ -30,9 +30,12 @@ function App() {
               className="absolute inset-0 w-full h-full background-image object-cover object-center"
             />
             <div className="relative flex flex-col justify-center items-center h-full w-full z-10">
-              <h2 className="font-serif p-16 text-center font-black text-3xl text-amber-100">
+              <h2 className="font-serif pt-16 px-16 text-center font-black text-3xl text-amber-100">
                 <LazyTextAnimation words="info@cdo-online.it - Via Lecce, 89 - Carmiano (LE)" />
               </h2>
+              <h3 className="font-serif pb-16 text-center font-black text-lg text-amber-100">
+                <LazyTextAnimation words="+39 333 454 63 20" />
+              </h3>
               <img
                 src={logo}
                 alt="Martena Gnalogia & Postura"
