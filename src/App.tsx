@@ -8,9 +8,33 @@ import { cn } from "./utils/cn";
 import LandingPageImage from "./assets/landingpage.png";
 import backgroundImage from "./assets/bg.png";
 import aboutImage from "./assets/about.png";
+import telecranium from "./assets/telecranium.png";
+import intraoralScanner from "./assets/intraoral_scanner.png";
+import bite from "./assets/bite.png";
+import { InfiniteMovingCards } from "./components/InfiniteMovingCards.component";
 
 function App() {
   const mainRef = useScrollSnap();
+
+  const services = [
+    {
+      image: telecranium,
+      name: "Telecranio",
+      description:
+        "Costruiamo un modello del tuo cranio per i problemi mandibolari",
+    },
+    {
+      image: intraoralScanner,
+      name: "Scanner Intraorale",
+      description: "Scansione 3D della tua bocca per una diagnosi precisa",
+    },
+    {
+      image: bite,
+      name: "Bite",
+      description:
+        "Risolviamo le tue cefalee facendoti respirare meglio la notte",
+    },
+  ];
 
   return (
     <>
@@ -121,6 +145,34 @@ che tu voglia la puoi trovare da noi!"
                   />
                 </h2>
               </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="services overflow-hidden">
+          <SEO
+            title="Martena Gnalogia & Postura: Servizi | Carmiano, Lecce"
+            description="Specialisti in gnatologia e posturologia a Carmiano. Scopri i nostri servizi per alleviare il dolore ATM e migliorare la tua postura."
+            type="article"
+            name="Martena Gnalogia & Postura"
+          />
+          <div className="relative h-screen w-screen p-16">
+            <div className="green-overlay"></div>
+            <img
+              src={backgroundImage}
+              alt="Background texture"
+              className="absolute inset-0 w-full h-full background-image object-contain object-center"
+            />
+            <div className="grid grid-cols-1 md:grid-cols-2 h-screen md:flex md:flex-col md:justify-center md:items-center">
+              <h2 className="pt-16 text-3xl uppercase font-bold md:px-16 col-span-1 md:col-span-2 z-10 md:pb-11">
+                I nostri servizi
+              </h2>
+              <InfiniteMovingCards
+                items={services}
+                speed="slow"
+                direction="left"
+                className="col-span-1 md:col-span-2 px-0"
+              />
             </div>
           </div>
         </section>
