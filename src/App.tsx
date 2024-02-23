@@ -12,6 +12,7 @@ import telecranium from "./assets/telecranium.png";
 import intraoralScanner from "./assets/intraoral_scanner.png";
 import bite from "./assets/bite.png";
 import { InfiniteMovingCards } from "./components/InfiniteMovingCards.component";
+import Footer from "./components/Footer.component";
 
 function App() {
   const mainRef = useScrollSnap();
@@ -177,6 +178,9 @@ che tu voglia la puoi trovare da noi!"
           </div>
         </section>
       </main>
+
+      <Footer />
+      {/** WEBSITE DRAWN AND CODED BY GIULIO MARIO MARTENA. ALL RIGHTS RESERVED. giulio.mario.martena@cdo-online.it */}
     </>
   );
 }
