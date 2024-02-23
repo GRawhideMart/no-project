@@ -1,9 +1,10 @@
 import Header from "./components/Header.component";
 import SEO from "./components/SEO.component";
-import { TextGenerateEffect } from "./components/TextGenerateEffect.component";
+import { LazyTextAnimation } from "./components/LazyTextGenerateEffect.component";
 import { useScrollSnap } from "./hooks/useScrollSnap";
 import logo from "/images/logo.png";
 import personSmiling from "/images/person_smiling.png";
+import { cn } from "./utils/cn";
 
 function App() {
   const mainRef = useScrollSnap();
@@ -39,25 +40,21 @@ function App() {
             type="article"
             name="Martena Gnalogia & Postura"
           />
-          <div className="bg-watermark bg-scroll bg-transparent bg-center h-screen w-screen p-16">
-            <div className="absolute inset-0 bg-gradient-to-t from-white to-emerald-500 opacity-90 p-16">
-              <div className="flex flex-col h-screen">
-                <h2 className="py-20 text-3xl uppercase font-bold px-16">
+          <div className="bg-watermark bg-scroll bg-transparent bg-center h-screen w-screen p-16 -z-10">
+            <div className="absolute inset-0 bg-gradient-to-t from-white to-emerald-500 opacity-95 p-16">
+              <div className="grid grid-cols-1 md:grid-cols-2 h-screen md:pb-52">
+                <h2 className="pt-16 text-3xl uppercase font-bold md:px-16 col-span-1 md:col-span-2">
                   Permettici di presentarci
                 </h2>
-                <div className="flex justify-center items-center px-16">
-                  <TextGenerateEffect
-                    className="text-green-800 mt-4 text-xl"
-                    words="Dal 1993 colleghiamo i tuoi disagi
-temporo-mandibolari all'impostazione
-della tua bocca. Dire che siamo solo
-dentisti è come dire che Leonardo era
-solo un pittore!"
+                <div className="md:px-16 col-span-1 md:col-span-2 md:flex md:items-center">
+                  <LazyTextAnimation
+                    className={cn("text-green-800 mt-4 text-xl md:w-2/3")}
+                    words="Dal 1993 colleghiamo i tuoi disagi temporo-mandibolari all'impostazione della tua bocca. Dire che siamo solo dentisti è come dire che Leonardo era solo un pittore!"
                   />
                   <img
                     src={personSmiling}
                     alt="A person smiling"
-                    className="w-1/3"
+                    className="w-fit md:w-1/3 mt-4"
                   />
                 </div>
               </div>

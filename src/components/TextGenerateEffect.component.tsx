@@ -3,13 +3,13 @@ import { useEffect } from "react";
 import { motion, stagger, useAnimate } from "framer-motion";
 import { cn } from "../utils/cn";
 
-export const TextGenerateEffect = ({
+export default function TextGenerateEffect({
   words,
   className,
 }: {
   words: string;
   className?: string;
-}) => {
+}) {
   const [scope, animate] = useAnimate();
   const wordsArray = words.split(" ");
   useEffect(() => {
@@ -48,4 +48,4 @@ export const TextGenerateEffect = ({
       </div>
     </div>
   );
-};
+}
