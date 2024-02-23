@@ -54,7 +54,7 @@ function App() {
                   <img
                     src={personSmiling}
                     alt="A person smiling"
-                    className="w-fit md:w-1/3 mt-4"
+                    className="w-fit md:w-1/3 mt-4 rounded-full border-green-800 border-4 z-10"
                   />
                 </div>
               </div>
