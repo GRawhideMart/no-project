@@ -3,9 +3,9 @@ import { MdFacebook } from "react-icons/md";
 
 const Footer = () => {
   return (
-    <footer className="bg-green-800 text-white p-10 text-center">
+    <footer className="bg-emerald-800 text-white p-10 text-center">
       <div className="container mx-auto">
-        <p>
+        <p className="font-serif">
           &copy; {new Date().getFullYear()} Martena Gnalogia & Postura. All
           Rights Reserved.
         </p>

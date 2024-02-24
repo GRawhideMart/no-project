@@ -94,12 +94,14 @@ function App() {
               className="absolute inset-0 w-full h-full background-image object-contain object-center"
             />
             <div className="grid grid-cols-1 md:grid-cols-2 h-screen md:pb-52">
-              <h2 className="pt-16 text-3xl uppercase font-bold md:px-16 col-span-1 md:col-span-2 z-10">
+              <h2 className="pt-16 text-3xl uppercase font-sans font-bold md:px-16 col-span-1 md:col-span-2 z-10">
                 Permettici di presentarci
               </h2>
               <div className="md:px-16 col-span-1 md:col-span-2 md:flex md:items-center z-10">
                 <LazyTextAnimation
-                  className={cn("text-green-800 mt-4 text-xl md:w-2/3 z-10")}
+                  className={cn(
+                    "text-green-800 mt-4 text-xl md:w-2/3 z-10 font-display"
+                  )}
                   words="Dal 1993 colleghiamo i tuoi disagi temporo-mandibolari all'impostazione della tua bocca. Dire che siamo solo dentisti è come dire che Leonardo era solo un pittore!"
                 />
                 <img
@@ -127,7 +129,7 @@ function App() {
               className="absolute inset-0 w-full h-full background-image object-contain object-center"
             />
             <div className="grid grid-cols-1 md:grid-cols-2 h-screen md:pb-52">
-              <h2 className="pt-16 text-3xl uppercase font-bold md:px-16 col-span-1 md:col-span-2 z-10">
+              <h2 className="pt-16 text-3xl uppercase font-sans font-bold md:px-16 col-span-1 md:col-span-2 z-10">
                 I nostri dottori curano il tuo benessere a 360°
               </h2>
               <div className="md:px-16 col-span-1 md:col-span-2 md:flex md:items-center z-10">
@@ -136,7 +138,7 @@ function App() {
                   alt="A person smiling"
                   className="w-48 h-48 md:w-96 md:h-96 mt-4 object-cover rounded-full border-green-800 border-4 z-10"
                 />
-                <h2 className="text-green-800 mt-4 text-xl md:w-2/3 z-10 md:px-16">
+                <h2 className="text-green-800 mt-4 text-xl md:w-2/3 z-10 md:px-16 font-display">
                   <LazyTextAnimation
                     words="Forniamo cure ortodontiche,
 gnatologiche, posturologiche e

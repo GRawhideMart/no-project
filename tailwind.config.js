@@ -3,9 +3,13 @@
 import { default as flattenColorPalette } from "tailwindcss/lib/util/flattenColorPalette";
 
 export default {
-  mode: "jit",
   content: ["./src/**/*.{html,ts,tsx}"],
   theme: {
+    fontfamily: {
+      sans: ["'Fira Sans Extra Condensed'", "sans-serif"],
+      serif: ["Cormorant", "serif"],
+      display: ["Rajdhani", "serif"],
+    },
     extend: {
       animation: {
         scroll:
